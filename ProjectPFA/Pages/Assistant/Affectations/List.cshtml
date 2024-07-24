@@ -1,0 +1,60 @@
+﻿@page
+@model ProjectPFA.Pages.Assistant.Affectations.ListModel
+@{
+}
+
+<div class="bg-secondary bg-opacity-10 py-2 mb-5">
+    <div class="container">
+        <h1>Liste des affectations</h1>
+    </div>
+</div>
+
+@if (Model.Affectations != null && Model.Affectations.Count != 0)
+{
+    <div class="container">
+        <div class="row">
+            @foreach (var affectation in Model.Affectations)
+            {
+                var cardClass = (Model.Affectations.IndexOf(affectation) % 4) switch
+                {
+                    0 => "bg-primary text-white",
+                    1 => "bg-success text-white",
+                    2 => "bg-info text-white",
+                    _ => "bg-warning text-dark"
+                };
+
+                <div class="col-md-4 mb-3">
+                    <div class="card @cardClass border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Affectation #@Html.DisplayFor(modelItem => affectation.BCI)</h5>
+                            <p class="card-text">
+                                <strong>Nom:</strong> @Html.DisplayFor(modelItem => affectation.Nom)<br />
+                                <strong>Prénom:</strong> @Html.DisplayFor(modelItem => affectation.Prenom)<br />
+                                <strong>Département:</strong> @Html.DisplayFor(modelItem => affectation.Departement)<br />
+                                <strong>Poste:</strong> @Html.DisplayFor(modelItem => affectation.Poste)<br />
+                                <strong>Shift:</strong> @Html.DisplayFor(modelItem => affectation.Shift)<br />
+                                <strong>Date Affectation:</strong> @Html.DisplayFor(modelItem => affectation.DateAffectation)
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                <form method="post" asp-page-handler="DeleteAffectation" asp-route-id="@affectation.Id" class="d-inline">
+                                    <button type="submit" class="btn btn-light">Supprimer</button>
+                                </form>
+                                <form method="post" asp-page-handler="SetDateFinAffectation" asp-route-id="@affectation.Id" class="d-inline">
+                                    <button type="submit" class="btn btn-dark">Définir Date Fin</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+else
+{
+    <div class="container">
+        <div class="alert alert-info" role="alert">
+            Aucune affectation n'est disponible.
+        </div>
+    </div>
+}

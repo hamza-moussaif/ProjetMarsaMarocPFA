@@ -1,0 +1,53 @@
+﻿@page "{id:Guid}"
+@model ProjectPFA.Pages.Demandeur.Demandes.EditModel
+@{
+}
+
+<div class="bg-secondary bg-opacity-10 py-2 mb-5">
+	<div class="container">
+		<h1>Modifier une demande</h1>
+	</div>
+</div>
+@if (Model.demande != null)
+{   
+    <div class="container">
+        <form method="post">
+            <div class="mb-3">
+                <label for="Id" class="form-label">Id</label>
+                <input type="text" class="form-control" id="Id" asp-for="demande.Id" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="BCI" class="form-label">NumeroBCI</label>
+                <input type="text" class="form-control" id="BCI" asp-for="demande.NBci">
+            </div>
+            <div class="mb-3">
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="nom" asp-for="demande.nomdemandeur">
+            </div>
+            <div class="mb-3">
+                <label for="departement" class="form-label">Departement</label>
+                <input type="text" class="form-control" id="Departement" asp-for="demande.Departement">
+            </div>
+            <div class="mb-3">
+                <label for="Shift" class="form-label">Shift</label>
+                <input type="text" class="form-control" id="shift" asp-for="demande.shift">
+            </div>
+            <div class="mb-3">
+                <label for="time" class="form-label">nombre jour</label>
+                <input type="number" class="form-control" id="time" asp-for="demande.NbrJours">
+            </div>
+            <div class="mb-3 d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary" asp-page-handler="Edit">Ajouter</button>
+                <button class="btn btn-danger" type="submit" asp-page-handler="Delete"  >Supprimer</button>
+            </div>
+
+        </form>
+    </div>
+}
+else
+{
+	<div class="container m-auto">
+		<h1>La demande n'existe pas</h1>
+	</div>
+}
+

@@ -1,0 +1,76 @@
+﻿@page
+@model ProjectPFA.Pages.Engins.ListModel
+@{
+    ViewData["Title"] = "List of Engins";
+}
+
+<h2 class="text-center my-4">List of Engins</h2>
+
+<div class="container">
+    <div class="row">
+        @foreach (var engin in Model.Engins)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    @if (engin.Image != null && engin.Image.Length > 0)
+                    {
+                        <img class="card-img-top" src="data:image;base64,@Convert.ToBase64String(engin.Image)" alt="Card image cap">
+                    }
+                    else
+                    {
+                        <img class="card-img-top" src="~/images/placeholder.jpg" alt="Card image cap">
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title">@engin.Name</h5>
+                        <p class="card-text"><strong>BCI:</strong> @engin.BCI</p>
+                        @if (engin.Etat.klaxon && engin.Etat.Sallette_Tracteur && engin.Etat.Flexible_Air_Tracteur && engin.Etat.Extincteur && engin.Etat.Verins_Translation_Fourches && engin.Etat.Eclairage && engin.Etat.gyrophares && engin.Etat.Vitres && engin.Etat.Carosserie)
+                        {
+                            <div class="alert alert-success" role="alert">
+                                Available
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="alert alert-danger" role="alert">
+                                Not Available
+                            </div>
+                        }
+                        <a href="/Engins/Edit/@engin.Id" class="btn btn-warning">Ajouter</a>
+                        <form method="post" asp-page-handler="Delete" asp-route-id="@engin.Id" class="d-inline">
+                            <button type="submit" class="btn btn-danger">Suprimer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (Model.Engins.Count == 0)
+		{
+			<div class="col-md-12">
+				<div class="alert alert-info" role="alert">
+					Aucun engin n'est disponible.
+				</div>
+			</div>
+		}
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <style>
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+}

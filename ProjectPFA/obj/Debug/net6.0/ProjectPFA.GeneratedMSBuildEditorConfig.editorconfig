@@ -1,0 +1,115 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ProjectPFA
+build_property.RootNamespace = ProjectPFA
+build_property.ProjectDir = C:\Users\hamza\OneDrive\Desktop\PFA\ProjectPFA\ProjectPFA\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\hamza\OneDrive\Desktop\PFA\ProjectPFA\ProjectPFA
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Areas/Identity/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Pages/Assistant/Affectations/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNzaXN0YW50XEFmZmVjdGF0aW9uc1xBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Pages/Assistant/Affectations/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNzaXN0YW50XEFmZmVjdGF0aW9uc1xMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Pages/Assistant/Demandes/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXNzaXN0YW50XERlbWFuZGVzXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Pages/Demandeur/Demandes/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVtYW5kZXVyXERlbWFuZGVzXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Pages/Demandeur/Demandes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVtYW5kZXVyXERlbWFuZGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Pages/Demandeur/Demandes/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVtYW5kZXVyXERlbWFuZGVzXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Pages/Engins/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5naW5zXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Pages/Engins/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5naW5zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Pages/Engins/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5naW5zXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hamza/OneDrive/Desktop/PFA/ProjectPFA/ProjectPFA/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-k8r1cktwsv

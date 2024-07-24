@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MarsaMaroc</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProjectPFA.styles.css" asp-append-version="true" />
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light border-bottom box-shadow">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <img class="h-50 w-50 m-auto pb-3" src="~/marsa-maroc-logo-E2DA20F4A6-seeklogo.com.png" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-Dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            @if(User.IsInRole("Demandeur")){
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                   aria-expanded="false" id="navbarDropdownDemandeur">Demandeur</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownDemandeur">
+                                    <li><a class="dropdown-item" href="/Demandeur/Demandes/Add">Ajouter une demande</a></li>
+                                    <li><a class="dropdown-item" href="/Demandeur/Demandes/List">List de demandes</a></li>
+                                </ul>
+                            </li>
+                            }else{
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                       aria-expanded="false" id="navbarDropdownAssistant">Assistant</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownAssistant">
+                                        <li><a class="dropdown-item" href="/Engins/List">Liste des Engins</a></li>
+                                        <li><a class="dropdown-item" href="/Engins/Add">Ajouter Engin</a></li>
+                                        <li><a class="dropdown-item" href="/Assistant/Demandes/List">Liste des Demandes</a></li>
+                                    </ul>
+                                </li>
+                            }
+                        }
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        
+                        <partial name="_loginPartial" />
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+    <footer class="border-top footer text-muted d-flex ">
+        <div class="container">
+            &copy; 2024 - MarsaMaroc 
+        </div>
+        <div class=" m-auto">
+            <a href="https://www.linkedin.com/in/hamza-moussaif-86ba6a228/" role="button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512">
+                <path fill="#b32d23" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" /></svg>
+            </a>
+            </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿@page
+@model ProjectPFA.Pages.Admin.Demandes.AddModel
+@{
+}
+<div class="bg-secondary bg-opacity-10 py-2 mb-5">
+	<div class="container">
+		<h1>Ajouter une demande</h1>
+	</div>
+</div>
+<div >
+    <div class="container">
+        <form method="post">
+            <div class="mb-3">
+                <label for="BCI" class="form-label">NumeroBCI</label>
+                <input type="text" class="form-control" id="BCI" asp-for="AddDemandeRequest.BCI">
+            </div>
+            <div class="mb-3">
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="nom" asp-for="AddDemandeRequest.nom">
+            </div>
+            <div class="mb-3">
+                <label for="departement" class="form-label">Departement</label>
+                <input type="text" class="form-control" id="Departement" asp-for="AddDemandeRequest.Departement">
+            </div>
+            <div class="mb-3">
+                <label for="Shift" class="form-label">Shift</label>
+                <input type="text" class="form-control" id="shift" asp-for="AddDemandeRequest.shift">
+            </div>
+            <div class="mb-3">
+				<label for="time" class="form-label">Quantite</label>
+                <input type="number" class="form-control" id="time" asp-for="AddDemandeRequest.time">
+            </div>
+            <div >
+                <button type="submit" class="btn btn-primary">Ajouter</button>
+            </div>
+        </form>
+    </div>
+</div>
+

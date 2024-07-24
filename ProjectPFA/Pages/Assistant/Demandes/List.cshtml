@@ -1,0 +1,93 @@
+﻿@page
+@model ProjectPFA.Pages.Assistant.Demandes.ListModel
+@{
+}
+<div class="bg-secondary bg-opacity-10 py-2 mb-5">
+    <div class="container">
+        <h1>Liste des demandes</h1>
+    </div>
+</div>
+
+@if (Model.Demandes != null && Model.Demandes.Count != 0)
+{
+    <div class="container">
+        <div class="row">
+            @foreach (var demande in Model.Demandes)
+            {
+                var isAccepted = demande.Etat.GetValueOrDefault(); // Handle nullable boolean
+                <div class="col-md-4 mb-3">
+                    <div class="card @(isAccepted ? "bg-success text-white" : "bg-warning text-dark") border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <span class="badge @(isAccepted ? "bg-success text-white" : "bg-warning text-dark")">
+                                    @(isAccepted ? "Accepté" : "En attente")
+                                </span>
+                                <span class="float-end fw-bold text-uppercase">
+                                    @(isAccepted ? "Accepté" : "En attente")
+                                </span>
+                            </h5>
+                            <p class="card-text">
+                                <strong>NumeroBCI:</strong> @demande.NBci<br />
+                                <strong>Nom:</strong> @demande.nomdemandeur<br />
+                                <strong>Departement:</strong> @demande.Departement<br />
+                                <strong>Shift:</strong> @demande.shift<br />
+                                <strong>Nombre de jours:</strong> @demande.NbrJours<br />
+                                <strong>Date de demande:</strong> @demande.DateDemande.ToString("dd/MM/yyyy")
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                @if (isAccepted)
+                                {
+                                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="@demande.Id">Supprimer</button>
+                                }
+                                else
+                                {
+                                    <a class="btn btn-primary" href="/Assistant/Affectations/Add/@demande.Id">Ajouter Affectation</a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Confirmer la suppression</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Êtes-vous sûr de vouloir supprimer cette demande ?
+                </div>
+                <div class="modal-footer">
+                    <form method="post" id="deleteForm">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                        <button type="submit" class="btn btn-danger">Supprimer</button>
+                        <input type="hidden" name="demandeId" id="demandeId" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const deleteModal = document.getElementById('deleteModal');
+        deleteModal.addEventListener('show.bs.modal', event => {
+            const button = event.relatedTarget;
+            const demandeId = button.getAttribute('data-id');
+            const form = deleteModal.querySelector('#deleteForm');
+            form.action = `@Url.Page("/Assistant/Demandes/List")`;
+            document.getElementById('demandeId').value = demandeId;
+        });
+    </script>
+}
+else
+{
+    <div class="container">
+        <div class="alert alert-info" role="alert">
+            Aucun demande n'est disponible.
+        </div>
+    </div>
+}
